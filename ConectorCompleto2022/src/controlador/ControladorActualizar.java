@@ -1,13 +1,11 @@
 package controlador;
 
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.Extras;
 import modelo.PaisDAO;
@@ -71,22 +69,21 @@ public class ControladorActualizar implements ActionListener, MouseListener, Win
         }
     }
 
-    private void llenarCampos(JTable tabla) {
-        JTable table = tabla;
+    private void llenarCampos() {
         int numero = 0;
         while (numero < 4) {
             switch (numero) {
                 case 0:
-                    this.vAc.txtIDA.setText(String.valueOf(table.getValueAt(table.getSelectedRow(), numero)));
+                    this.vAc.txtIDA.setText(String.valueOf(this.vAc.tblActualizar.getValueAt(this.vAc.tblActualizar.getSelectedRow(), numero)));
                     break;
                 case 1:
-                    this.vAc.txtNombrePaisA.setText(String.valueOf(table.getValueAt(table.getSelectedRow(), numero)));
+                    this.vAc.txtNombrePaisA.setText(String.valueOf(this.vAc.tblActualizar.getValueAt(this.vAc.tblActualizar.getSelectedRow(), numero)));
                     break;
                 case 2:
-                    this.vAc.txtCapitalA.setText(String.valueOf(table.getValueAt(table.getSelectedRow(), numero)));
+                    this.vAc.txtCapitalA.setText(String.valueOf(this.vAc.tblActualizar.getValueAt(this.vAc.tblActualizar.getSelectedRow(), numero)));
                     break;
                 case 3:
-                    this.vAc.txtPoblacionA.setText(String.valueOf(table.getValueAt(table.getSelectedRow(), numero)));
+                    this.vAc.txtPoblacionA.setText(String.valueOf(this.vAc.tblActualizar.getValueAt(this.vAc.tblActualizar.getSelectedRow(), numero)));
                     break;
                 default:
                     System.out.println("Holi");
@@ -117,13 +114,8 @@ public class ControladorActualizar implements ActionListener, MouseListener, Win
 
     @Override
     public void mousePressed(MouseEvent me) {
-        JTable table = (JTable) me.getSource();
-        Point punto = me.getPoint();
-        int fila = table.rowAtPoint(punto);
-        if (!(fila < 0)) {
-            if (me.getClickCount() == 2) {
-                llenarCampos(table);
-            }
+        if (me.getClickCount() == 2) {
+            llenarCampos();
         }
     }
 
