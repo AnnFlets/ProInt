@@ -15,7 +15,7 @@ public class Conector {
     private String cadena; //Va a contener todas las demás variables
     
     //Declaracion de objetos para la conexion
-    Connection connection; //opcion que diga java.sql
+    public Connection connection; //opcion que diga java.sql
     Statement statement; //opcion que diga java.sql
     
     //Declaracion de metodos para la conexion

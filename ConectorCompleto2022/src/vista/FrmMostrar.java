@@ -32,10 +32,12 @@ public class FrmMostrar extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         DefaultTableModel dtm = new DefaultTableModel();
         tblMostrar = new javax.swing.JTable();
-        btnCancelar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         lblTituloMostrar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        btnCancelar = new javax.swing.JButton();
+        lblReporte = new javax.swing.JLabel();
+        lbldesReporte = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Mostrar");
@@ -57,13 +59,6 @@ public class FrmMostrar extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblMostrar);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 450, 280));
-
-        btnCancelar.setBackground(new java.awt.Color(255, 153, 153));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(153, 0, 51));
-        btnCancelar.setText("CANCELAR");
-        btnCancelar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 117, 55));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -93,15 +88,44 @@ public class FrmMostrar extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setForeground(new java.awt.Color(204, 204, 255));
 
+        btnCancelar.setBackground(new java.awt.Color(255, 153, 153));
+        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(153, 0, 51));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ipdf.png"))); // NOI18N
+
+        lbldesReporte.setForeground(new java.awt.Color(0, 0, 0));
+        lbldesReporte.setText("Generar reporte");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lblReporte))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(lbldesReporte)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(319, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lblReporte)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbldesReporte)))
+                .addGap(26, 26, 26))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 490, 400));
@@ -149,7 +173,9 @@ public class FrmMostrar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel lblReporte;
     private javax.swing.JLabel lblTituloMostrar;
+    private javax.swing.JLabel lbldesReporte;
     public javax.swing.JTable tblMostrar;
     // End of variables declaration//GEN-END:variables
 }

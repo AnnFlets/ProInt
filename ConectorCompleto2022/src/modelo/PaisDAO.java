@@ -3,9 +3,17 @@ package modelo;
 import conexion.Conector;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class PaisDAO implements ConsultasPais{
 
+    //Variable global para el reporte
+    public JasperViewer jv;
+    
     @Override
     public boolean insertar(PaisVO p) {
         Conector c = new Conector();
@@ -86,6 +94,28 @@ public class PaisDAO implements ConsultasPais{
         }
         c.desconectar();
         return true;
+    }
+
+    //Método para generar el reporte
+    @Override
+    public void reporte() {
+        Conector c = new Conector();
+        try{
+            c.conectar();
+            //Definir una variable que encuentra el reporte
+            //Se llena con la ruta
+            JasperReport reporte;
+            //Ruta del reporte
+            String ruta = "src\\reportes\\ReportePaises.jasper";
+            //Asignacion de ruta
+            reporte = (JasperReport) JRLoader.loadObjectFromFile(ruta);
+            JasperPrint jp = JasperFillManager.fillReport(ruta, null, c.connection);
+            JasperViewer jv = new JasperViewer(jp, false);
+            this.jv = jv;
+        }catch(Exception e){
+            System.err.println("Error[MReporte]: " + e.getMessage());
+            c.desconectar();
+        }
     }
     
 }
