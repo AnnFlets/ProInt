@@ -106,10 +106,13 @@ public class PaisDAO implements ConsultasPais{
             //Se llena con la ruta
             JasperReport reporte;
             //Ruta del reporte
-            String ruta = "src\\reportes\\ReportePaises.jasper";
+            //String ruta = "src\\reportes\\ReportePaises.jasper";
+            String ruta = "/reportes/ReportePaises.jasper";
             //Asignacion de ruta
-            reporte = (JasperReport) JRLoader.loadObjectFromFile(ruta);
-            JasperPrint jp = JasperFillManager.fillReport(ruta, null, c.connection);
+            //reporte = (JasperReport) JRLoader.loadObjectFromFile(ruta);
+            reporte = (JasperReport) JRLoader.loadObject(getClass().getResource(ruta));
+            //JasperPrint jp = JasperFillManager.fillReport(ruta, null, c.connection);
+            JasperPrint jp = JasperFillManager.fillReport(reporte, null, c.connection);
             JasperViewer jv = new JasperViewer(jp, false);
             this.jv = jv;
         }catch(Exception e){
