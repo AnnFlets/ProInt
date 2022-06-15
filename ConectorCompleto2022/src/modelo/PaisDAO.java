@@ -103,7 +103,6 @@ public class PaisDAO implements ConsultasPais{
         try{
             c.conectar();
             //Definir una variable que encuentra el reporte
-            //Se llena con la ruta
             JasperReport reporte;
             //Ruta del reporte
             //String ruta = "src\\reportes\\ReportePaises.jasper";
