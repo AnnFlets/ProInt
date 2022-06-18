@@ -7,7 +7,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import modelo.PaisDAO;
 import modelo.PaisVO;
 import vista.FrmMostrar;
