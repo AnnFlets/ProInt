@@ -130,4 +130,21 @@ public class UsuarioDAO implements ConsultarUsuario{
             c.desconectar();
         }
     }
+
+    @Override
+    public boolean actualizarRango(UsuarioVO u) {
+        Conector c = new Conector();
+        try{
+            c.conectar();
+            String query = "UPDATE bdjuego.usuario u " +
+            "SET u.fecha_actualizacion_usuario = '" + u.getFechaActualizacionUsuario() + "', u.id_tipo_usuario_fk = " + u.getIdTipoUsuarioFk() + " WHERE u.id_usuario = " + u.getIdUsuario();
+            c.consultasMultiples(query);
+        }catch(Exception e){
+            System.err.println("Error[M-ActualizarTipoU]: " + e.getMessage());
+            c.desconectar();
+            return false;
+        }
+        c.desconectar();
+        return true;
+    }
 }

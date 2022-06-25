@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Conector {
+    
     //Declaracion de variables para la conexion
     private String driver = "com.mysql.jdbc.Driver";
     private String host = "127.0.0.1"; //Servidor
@@ -18,14 +19,14 @@ public class Conector {
     public Connection connection;
     Statement statement;
     
-    //Declaracion de metodos para la conexion
-    //Va a realizar una conexion con la base de datos
+    /*Declaracion de metodos para la conexion
+    Va a realizar una conexion con la base de datos*/
     public void conectar(){
         //Ruta de conexion
         this.cadena = "jdbc:mysql://" + this.host + "/" + this.db;
         try{
-            //Permitir que se active el paquete que contiene la clase Driver
-            //Crea una nueva instancia y permite ejecutarla para que la conexion se realice
+            /*Permitir que se active el paquete que contiene la clase Driver
+            Crea una nueva instancia y permite ejecutarla para que la conexion se realice*/
             Class.forName(this.driver).newInstance();
             this.connection = DriverManager.getConnection(this.cadena, this.user, this.pass);
         }catch(Exception e){

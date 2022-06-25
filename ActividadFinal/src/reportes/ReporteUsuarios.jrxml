@@ -4,8 +4,10 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[SELECT u.id_usuario, u.nombre_usuario, u.apellido_usuario, u.edad_usuario, u.usuario_usuario, t.nombre_tipo_usuario
+		<![CDATA[SELECT u.id_usuario, u.nombre_usuario, u.apellido_usuario, u.edad_usuario, u.usuario_usuario, t.nombre_tipo_usuario, p.puntaje_principiante, p.puntaje_intermedio, p.puntaje_avanzado
 FROM bdjuego.usuario u
+INNER JOIN bdjuego.puntajes_usuario p 
+ON u.id_usuario = p.id_usuario_fk
 INNER JOIN bdjuego.tipo_usuario t 
 ON u.id_tipo_usuario_fk = t.id_tipo_usuario 
 WHERE u.id_tipo_usuario_fk <> 1;]]>
@@ -26,6 +28,15 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="nombre_tipo_usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puntaje_principiante" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puntaje_intermedio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puntaje_avanzado" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<background>
@@ -64,20 +75,20 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="57" splitType="Stretch">
+		<band height="86" splitType="Stretch">
 			<staticText>
 				<reportElement x="31" y="0" width="491" height="41" uuid="390aabf8-0fe7-4966-bf1f-186bd0249898"/>
 				<textElement textAlignment="Justified">
-					<font fontName="Century Gothic" size="12" isBold="false"/>
+					<font fontName="Century Gothic" size="11" isBold="false"/>
 				</textElement>
-				<text><![CDATA[El presente reporte tiene el fin de presentar el listado de jugadores inscritos a la fecha en el juego "Just Answer" y el rango que estos ocupan actualmente.]]></text>
+				<text><![CDATA[El presente reporte tiene el fin de presentar el listado de jugadores inscritos a la fecha en el juego "Just Answer", el rango que estos ocupan actualmente y sus respectivos puntajes para cada nivel.]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="92" height="20" uuid="6a6d011b-1f2a-49cc-9402-c7361505ccae"/>
+				<reportElement x="7" y="0" width="31" height="20" uuid="37288430-e337-4a87-9715-672106c7406d"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -86,12 +97,12 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="92" y="0" width="92" height="20" uuid="4ef7f32b-20fd-4a28-9881-12401f205b05"/>
+				<reportElement x="38" y="0" width="74" height="20" uuid="68d8ec85-ded6-47cc-a6c3-48674fee29a2"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -100,12 +111,12 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOMBRE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="184" y="0" width="92" height="20" uuid="08024e29-5d06-4b4c-a2d8-332c1d086b87"/>
+				<reportElement x="112" y="0" width="76" height="20" uuid="38e2c2a3-405a-48b4-ad7f-d15b23333061"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -114,12 +125,12 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[APELLIDO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="276" y="0" width="92" height="20" uuid="525b6d34-4771-4ff0-ae6a-f7c420a141d6"/>
+				<reportElement x="188" y="0" width="37" height="20" uuid="7880d907-45ae-41ad-b33b-f466f7bc25b7"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -128,12 +139,12 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="368" y="0" width="92" height="20" uuid="24dcbee3-bb89-46f0-b29a-1b71eaa844d6"/>
+				<reportElement x="225" y="0" width="77" height="20" uuid="4e72e6d6-f471-4695-adab-2cb98632dbe6"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -142,12 +153,12 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[USUARIO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="460" y="0" width="92" height="20" uuid="104e7671-7083-4ffc-8003-32eddadf1853"/>
+				<reportElement x="302" y="0" width="64" height="20" uuid="c4beb61a-a96a-4592-a0f8-4019bbc28ff1"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -156,16 +167,58 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Century Gothic" isBold="true"/>
+					<font fontName="Century Gothic" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TIPO USUARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="61" height="20" uuid="9822880f-f717-4cff-ba5b-76fde50beaf3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRINCIPIANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="61" height="20" uuid="0dd94ad0-2aec-4297-b57e-b5448169fef0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INTERMEDIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="61" height="20" uuid="b620914a-897c-489f-9ef6-6bd363858c8f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AVANZADO]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="92" height="20" uuid="1f33a135-fc14-4ad7-bfbc-1637ebb1a000"/>
+				<reportElement x="7" y="0" width="31" height="20" uuid="20475cb4-2264-4c08-8721-283a6617b8e7"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -179,7 +232,7 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 				<textFieldExpression><![CDATA[$F{id_usuario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="92" y="0" width="92" height="20" uuid="a34629e5-e803-484b-bac1-fde80daf1860"/>
+				<reportElement x="38" y="0" width="74" height="20" uuid="5129bf92-c2b0-449f-9f29-6725bc1e0090"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -193,7 +246,7 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 				<textFieldExpression><![CDATA[$F{nombre_usuario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="184" y="0" width="92" height="20" uuid="1d328966-7f36-4020-8314-e01a1a081b08"/>
+				<reportElement x="112" y="0" width="76" height="20" uuid="19aa28c1-f8d4-41d9-af2a-2ec90151b22c"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -207,7 +260,7 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 				<textFieldExpression><![CDATA[$F{apellido_usuario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="276" y="0" width="92" height="20" uuid="2a9b1ba8-6dc1-4793-b781-30e2359396a6"/>
+				<reportElement x="188" y="0" width="37" height="20" uuid="2b0c15fd-62a1-4685-8e69-9db3360c97e7"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -221,7 +274,7 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 				<textFieldExpression><![CDATA[$F{edad_usuario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="368" y="0" width="92" height="20" uuid="9a08640e-c70a-4875-be70-6febf14af996"/>
+				<reportElement x="225" y="0" width="77" height="20" uuid="2348d8b9-edf3-425e-96af-381e417a1862"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -235,7 +288,7 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 				<textFieldExpression><![CDATA[$F{usuario_usuario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="460" y="0" width="92" height="20" uuid="6136c4fb-f955-42bc-a8ac-4d66af9babde"/>
+				<reportElement x="302" y="0" width="64" height="20" uuid="9747ce8a-fca2-4a66-a8b7-aaf829dcea1c"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -247,6 +300,48 @@ WHERE u.id_tipo_usuario_fk <> 1;]]>
 					<font fontName="Century Gothic"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nombre_tipo_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="61" height="20" uuid="cb2e61d7-93a7-4eb4-8072-49c91c2c431c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_principiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="61" height="20" uuid="166f3ba3-5821-41f0-8ba8-b9db24bd3de0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_intermedio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="61" height="20" uuid="6d16d818-fb51-4391-9b8e-f4258bc8577e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_avanzado}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

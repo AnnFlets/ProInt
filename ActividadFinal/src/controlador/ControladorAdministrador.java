@@ -1,7 +1,5 @@
 package controlador;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
@@ -10,6 +8,8 @@ import java.util.ArrayList;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 import modelo.Extras;
+import modelo.PuntajesUsuarioDAO;
+import modelo.PuntajesUsuarioVO;
 import modelo.TipoUsuarioDAO;
 import modelo.TipoUsuarioVO;
 import modelo.UsuarioDAO;
@@ -17,7 +17,7 @@ import modelo.UsuarioVO;
 import vista.FrmAdministrador;
 import vista.FrmLogin;
 
-public class ControladorAdministrador implements ActionListener, WindowListener, MouseListener {
+public class ControladorAdministrador implements WindowListener, MouseListener {
 
     FrmLogin vLogin = new FrmLogin();
     FrmAdministrador vAdmin = new FrmAdministrador();
@@ -25,14 +25,18 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
     UsuarioDAO udao = new UsuarioDAO();
     TipoUsuarioVO tuvo = new TipoUsuarioVO();
     TipoUsuarioDAO tudao = new TipoUsuarioDAO();
+    PuntajesUsuarioVO puvo = new PuntajesUsuarioVO();
+    PuntajesUsuarioDAO pudao = new PuntajesUsuarioDAO();
 
-    public ControladorAdministrador(FrmLogin vLogin, FrmAdministrador vAdmin, UsuarioVO uvo, UsuarioDAO udao, TipoUsuarioVO tuvo, TipoUsuarioDAO tudao) {
+    public ControladorAdministrador(FrmLogin vLogin, FrmAdministrador vAdmin, UsuarioVO uvo, UsuarioDAO udao, TipoUsuarioVO tuvo, TipoUsuarioDAO tudao, PuntajesUsuarioVO puvo, PuntajesUsuarioDAO pudao) {
         this.vLogin = vLogin;
         this.vAdmin = vAdmin;
         this.uvo = uvo;
         this.udao = udao;
         this.tuvo = tuvo;
         this.tudao = tudao;
+        this.puvo = puvo;
+        this.pudao = pudao;
         this.vAdmin.addWindowListener(this);
         this.vAdmin.tblUsuarios.addMouseListener(this);
         this.vAdmin.lblInsertar.addMouseListener(this);
@@ -42,6 +46,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         this.vAdmin.lblReporteU.addMouseListener(this);
     }
 
+    //Método para mostrar la información de los usuarios existentes en una tabla
     private void mostrarUsuarios() {
         DefaultTableModel mU = new DefaultTableModel() {
             @Override
@@ -76,6 +81,8 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         vAdmin.tblUsuarios.getTableHeader().getColumnModel().getColumn(5).setMinWidth(0);
     }
 
+    /*Método para llenar el comboBox con los niveles y/o rangos del usuario
+    Rangos: Administrador, Principiante, Intermedio y Avanzado*/
     private void llenarComboBox() {
         ArrayList<TipoUsuarioVO> tiposUs = tudao.consultarTipo();
         for (int i = 0; i < tiposUs.size(); i++) {
@@ -87,6 +94,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         }
     }
 
+    //Método para llenar los TextField con la información del usuario seleccionado en la tabla 
     private void llenarCamposUsuario() {
         int numero = 0;
         while (numero < 7) {
@@ -117,6 +125,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         }
     }
 
+    //Método para encontrar el ID que representa el nivel y/o rango seleccionado en el comboBox
     private int encontrarIDTipoUsuario() {
         int idUser = 0;
         String tipoUser = String.valueOf(this.vAdmin.cmbRango.getSelectedItem());
@@ -128,6 +137,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         return idUser;
     }
 
+    //Método para registrar al usuario, tanto en la tabla 'usuario' como en la tabla 'puntajes_usuario'
     private void registrarUsuario() {
         try {
             this.uvo.setNombreUsuario(this.vAdmin.txtNombre.getText());
@@ -138,8 +148,13 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
             this.uvo.setFechaIngresoUsuario(Extras.fechaHoy());
             this.uvo.setIdTipoUsuarioFk(encontrarIDTipoUsuario());
             if (udao.insertar(uvo) == true) {
-                this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Datos insertados con éxito");
-                limpiarCampos();
+                this.puvo.setIdUsuarioFk(buscarIdInsertado());
+                if (pudao.insertarP(puvo)) {
+                    this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Datos insertados con éxito");
+                    limpiarCampos();
+                } else {
+                    this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Error, datos no registrados");
+                }
             } else {
                 this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Error, datos no registrados");
             }
@@ -148,6 +163,22 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         }
     }
 
+    /*Método para encontrar y devolver el ID del usuario creado, para insertarlo en la llave foránea 
+    'id_usuario_fk' de la tabla 'puntajes_usuario'*/
+    private int buscarIdInsertado() {
+        int codigoU = 0;
+        ArrayList<UsuarioVO> usuarios = udao.consultar();
+        for (int i = 0; i < usuarios.size(); i++) {
+            String userU = String.valueOf(usuarios.get(i).getUsuarioUsuario());
+            String userC = String.valueOf(usuarios.get(i).getContrasenaUsuario());
+            if (userU.equals(this.vAdmin.txtUsuario.getText()) && userC.equals(this.vAdmin.psfContrasena.getText())) {
+                codigoU = usuarios.get(i).getIdUsuario();
+            }
+        }
+        return codigoU;
+    }
+
+    //Método para modificar la información del usuario seleccionado
     private void modificarUsuario() {
         try {
             this.uvo.setIdUsuario(Integer.parseInt(this.vAdmin.txtID.getText()));
@@ -158,6 +189,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
             this.uvo.setContrasenaUsuario(this.vAdmin.psfContrasena.getText());
             this.uvo.setFechaActualizacionUsuario(Extras.fechaHoy());
             this.uvo.setIdTipoUsuarioFk(encontrarIDTipoUsuario());
+            this.puvo.setIdUsuarioFk(this.uvo.getIdUsuario());
             if (udao.actualizar(uvo) == true) {
                 this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Datos modificados con éxito");
                 limpiarCampos();
@@ -169,22 +201,31 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         }
     }
 
+    /*Método para eliminar al usuario seleccionado, tanto su información personal (tabla 'usuario')
+    como sus puntajes (tabla 'puntajes_usuario')*/
     private void eliminarUsuario() {
         this.uvo.setIdUsuario(Integer.parseInt(this.vAdmin.txtID.getText()));
-        if (udao.eliminar(uvo) == true) {
-            this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Datos eliminados correctamente");
-            limpiarCampos();
+        this.puvo.setIdUsuarioFk(Integer.parseInt(this.vAdmin.txtID.getText()));
+        if (pudao.eliminarP(puvo) == true) {
+            if (udao.eliminar(uvo) == true) {
+                this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Datos eliminados correctamente");
+                limpiarCampos();
+            } else {
+                this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Error, datos no eliminados");
+            }
         } else {
             this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "Error, datos no eliminados");
         }
     }
-    
-    private void reporteUsuarios(){
+
+    //Método para generar el reporte de usuarios
+    private void reporteUsuarios() {
         udao.reporte();
         udao.jv.setDefaultCloseOperation(vAdmin.DISPOSE_ON_CLOSE);
         udao.jv.setVisible(true);
     }
 
+    //Método para limpiar los campos luego de realizar una acción de inserción, modificación o eliminación de datos
     private void limpiarCampos() {
         this.vAdmin.txtID.setText("");
         this.vAdmin.txtNombre.setText("");
@@ -194,6 +235,7 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         this.vAdmin.psfContrasena.setText("");
     }
 
+    //Método para devolver el nombre y apellido del usuario administrador logueado y establecerlo en la ventana
     private String encontrarNombreApellido() {
         String nombre = "";
         String apellido = "";
@@ -205,11 +247,6 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
         }
         String nombreCompleto = nombre + " " + apellido;
         return nombreCompleto;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-
     }
 
     @Override
@@ -319,23 +356,23 @@ public class ControladorAdministrador implements ActionListener, WindowListener,
                 this.vAdmin.jopAdministrador.showMessageDialog(vAdmin, "No ha seleccionado ningún registro a eliminar");
             }
         }
-        if(me.getSource() == vAdmin.lblReporteU){
+        if (me.getSource() == vAdmin.lblReporteU) {
             reporteUsuarios();
         }
     }
 
     @Override
     public void mouseReleased(MouseEvent me) {
-
+        
     }
 
     @Override
     public void mouseEntered(MouseEvent me) {
-
+        
     }
 
     @Override
     public void mouseExited(MouseEvent me) {
-
+        
     }
 }

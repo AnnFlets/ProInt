@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
-/**
- *
- * @author Ana
- */
+import java.util.ArrayList;
+
 public interface ConsultarPuntajesUsuario {
-    
+    public boolean insertarP(PuntajesUsuarioVO puvo);
+    public ArrayList<PuntajesUsuarioVO> consultarP();
+    public boolean actualizarPrincipiante(PuntajesUsuarioVO puvo);
+    public boolean actualizarIntermedio(PuntajesUsuarioVO puvo);
+    public boolean actualizarAvanzado(PuntajesUsuarioVO puvo);
+    public boolean eliminarP(PuntajesUsuarioVO puvo);
 }

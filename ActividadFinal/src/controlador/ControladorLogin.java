@@ -3,7 +3,6 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import javax.swing.SwingConstants;
 import modelo.UsuarioDAO;
 import modelo.UsuarioVO;
 import vista.FrmAdministrador;
@@ -28,11 +27,14 @@ public class ControladorLogin implements ActionListener {
         this.vLogin.btnIngresar.addActionListener(this);
     }
 
+    //Limpia los campos de texto donde se ingresa el usuario y contraseña al iniciar sesión
     private void limpiarCampos() {
         this.vLogin.txtNombreUsuario.setText("");
         this.vLogin.txtContrasena.setText("");
     }
 
+    /*Verifica que el usuario y contraseña pertenezcan a algún registro de la tabla 'usuarios'
+    y devuelve el tipo de usuario*/
     private int verificacionUsuario() {
         int tipoU = 0;
         String usuario = this.vLogin.txtNombreUsuario.getText();

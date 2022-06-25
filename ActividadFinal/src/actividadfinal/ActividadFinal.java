@@ -3,6 +3,8 @@ package actividadfinal;
 import controlador.ControladorAdministrador;
 import controlador.ControladorJugador;
 import controlador.ControladorLogin;
+import modelo.PuntajesUsuarioDAO;
+import modelo.PuntajesUsuarioVO;
 import modelo.TipoUsuarioDAO;
 import modelo.TipoUsuarioVO;
 import modelo.UsuarioDAO;
@@ -25,13 +27,15 @@ public class ActividadFinal {
         UsuarioDAO udao = new UsuarioDAO();
         TipoUsuarioVO tuvo = new TipoUsuarioVO();
         TipoUsuarioDAO tudao = new TipoUsuarioDAO();
+        PuntajesUsuarioVO puvo = new PuntajesUsuarioVO();
+        PuntajesUsuarioDAO pudao = new PuntajesUsuarioDAO();
         
         //Controladores
         ControladorLogin cLogin = new ControladorLogin(vLogin, vAdmin, vJugar, uvo, udao);
-        ControladorAdministrador cAdmin = new ControladorAdministrador(vLogin, vAdmin, uvo, udao, tuvo, tudao);
-        ControladorJugador cJugar = new ControladorJugador(vLogin, vJugar, uvo, udao, tuvo, tudao);
+        ControladorAdministrador cAdmin = new ControladorAdministrador(vLogin, vAdmin, uvo, udao, tuvo, tudao, puvo, pudao);
+        ControladorJugador cJugar = new ControladorJugador(vLogin, vJugar, uvo, udao, tuvo, tudao, puvo, pudao);
         
-        //Configuracion pantalla del login
+        //Configuracion ventana del login
         vLogin.setVisible(true);
         vLogin.setResizable(false);
         vLogin.setLocationRelativeTo(null);

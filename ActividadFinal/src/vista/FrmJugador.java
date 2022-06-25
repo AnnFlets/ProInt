@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
-/**
- *
- * @author Ana
- */
 public class FrmJugador extends javax.swing.JFrame {
 
     /**
@@ -27,6 +18,7 @@ public class FrmJugador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jopMensaje = new javax.swing.JOptionPane();
         pnlFondoHerramientas = new javax.swing.JPanel();
         pnlFondoUsuario = new javax.swing.JPanel();
         lblImagenUsuario = new javax.swing.JLabel();
@@ -38,6 +30,104 @@ public class FrmJugador extends javax.swing.JFrame {
         btnPrincipiante = new javax.swing.JButton();
         btnIntermedio = new javax.swing.JButton();
         btnAvanzado = new javax.swing.JButton();
+        jtpPestanias = new javax.swing.JTabbedPane();
+        pnlHome = new javax.swing.JPanel();
+        lblTItulo1 = new javax.swing.JLabel();
+        pnlHomeP = new javax.swing.JPanel();
+        lblTituloNota1 = new javax.swing.JLabel();
+        lblPunteoP = new javax.swing.JLabel();
+        lblEstadoP = new javax.swing.JLabel();
+        pnlHomeA = new javax.swing.JPanel();
+        lblTituloNota3 = new javax.swing.JLabel();
+        lblPunteoA = new javax.swing.JLabel();
+        lblEstadoA = new javax.swing.JLabel();
+        pnlHomeI = new javax.swing.JPanel();
+        lblTituloNota2 = new javax.swing.JLabel();
+        lblPunteoI = new javax.swing.JLabel();
+        lblEstadoI = new javax.swing.JLabel();
+        lblTitulo2 = new javax.swing.JLabel();
+        pnlTituloP = new javax.swing.JPanel();
+        lblHomeTP = new javax.swing.JLabel();
+        pnlTituloI = new javax.swing.JPanel();
+        lblHomeTI = new javax.swing.JLabel();
+        pnlTituloA = new javax.swing.JPanel();
+        lblHomeTA = new javax.swing.JLabel();
+        pnlPrincipiante = new javax.swing.JPanel();
+        lblTituloP = new javax.swing.JLabel();
+        lblNumero1S = new javax.swing.JLabel();
+        lblNumero2S = new javax.swing.JLabel();
+        lblIgual1 = new javax.swing.JLabel();
+        lblSum1 = new javax.swing.JLabel();
+        txtRespuestaS1 = new javax.swing.JTextField();
+        lblNumero3S = new javax.swing.JLabel();
+        lblSum2 = new javax.swing.JLabel();
+        lblNumero4S = new javax.swing.JLabel();
+        lblIgual2 = new javax.swing.JLabel();
+        txtRespuestaS2 = new javax.swing.JTextField();
+        lblResta1 = new javax.swing.JLabel();
+        txtRespuestaR1 = new javax.swing.JTextField();
+        lblNumero1R = new javax.swing.JLabel();
+        lblNumero2R = new javax.swing.JLabel();
+        lblIgual3 = new javax.swing.JLabel();
+        lblResta2 = new javax.swing.JLabel();
+        txtRespuestaR2 = new javax.swing.JTextField();
+        lblNumero3R = new javax.swing.JLabel();
+        lblNumero4R = new javax.swing.JLabel();
+        lblIgual4 = new javax.swing.JLabel();
+        lblMulti1 = new javax.swing.JLabel();
+        txtRespuestaM1 = new javax.swing.JTextField();
+        lblNumero1M = new javax.swing.JLabel();
+        lblNumero2M = new javax.swing.JLabel();
+        lblIgual5 = new javax.swing.JLabel();
+        lblDiv1 = new javax.swing.JLabel();
+        txtRespuestaD1 = new javax.swing.JTextField();
+        lblNumero1D = new javax.swing.JLabel();
+        lblNumero2D = new javax.swing.JLabel();
+        lblIgual6 = new javax.swing.JLabel();
+        btnTerminarP = new javax.swing.JButton();
+        lblDescripcionP = new javax.swing.JLabel();
+        pnlIntermedio = new javax.swing.JPanel();
+        lblTituloI = new javax.swing.JLabel();
+        lblDescripcionI = new javax.swing.JLabel();
+        lblPregunta1B = new javax.swing.JLabel();
+        lblPregunta1A = new javax.swing.JLabel();
+        cmbRespuesta1 = new javax.swing.JComboBox<>();
+        lblNum1 = new javax.swing.JLabel();
+        lblNum2 = new javax.swing.JLabel();
+        lblPregunta2A = new javax.swing.JLabel();
+        lblPregunta2B = new javax.swing.JLabel();
+        cmbRespuesta2 = new javax.swing.JComboBox<>();
+        lblNum3 = new javax.swing.JLabel();
+        lblPregunta3A = new javax.swing.JLabel();
+        lblPregunta3B = new javax.swing.JLabel();
+        cmbRespuesta3 = new javax.swing.JComboBox<>();
+        lblNum4 = new javax.swing.JLabel();
+        lblPregunta4 = new javax.swing.JLabel();
+        cmbRespuesta4 = new javax.swing.JComboBox<>();
+        lblNum5 = new javax.swing.JLabel();
+        lblPregunta5 = new javax.swing.JLabel();
+        cmbRespuesta5 = new javax.swing.JComboBox<>();
+        btnTerminarI = new javax.swing.JButton();
+        pnlAvanzado = new javax.swing.JPanel();
+        lblTituloA = new javax.swing.JLabel();
+        lblDescripcion2A = new javax.swing.JLabel();
+        lblNumeroSecreto = new javax.swing.JLabel();
+        txtIntento1 = new javax.swing.JTextField();
+        txtIntento2 = new javax.swing.JTextField();
+        txtIntento3 = new javax.swing.JTextField();
+        lblIntento2 = new javax.swing.JLabel();
+        lblIntento3 = new javax.swing.JLabel();
+        lblIntento1 = new javax.swing.JLabel();
+        btnComprobarNumero = new javax.swing.JButton();
+        lblDescripcion1A = new javax.swing.JLabel();
+        lblPalabra1 = new javax.swing.JLabel();
+        lblPalabra3 = new javax.swing.JLabel();
+        lblPalabra2 = new javax.swing.JLabel();
+        txtPalabra1A = new javax.swing.JTextField();
+        txtPalabra3A = new javax.swing.JTextField();
+        txtPalabra2A = new javax.swing.JTextField();
+        btnTerminarA = new javax.swing.JButton();
+        lblFondoArriba = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MENÚ JUGADOR");
@@ -67,7 +157,7 @@ public class FrmJugador extends javax.swing.JFrame {
 
         pnlFondoHerramientas.add(pnlFondoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 250));
 
-        btnHome.setBackground(new java.awt.Color(102, 105, 126));
+        btnHome.setBackground(new java.awt.Color(123, 128, 156));
         btnHome.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         btnHome.setForeground(new java.awt.Color(255, 255, 255));
         btnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
@@ -80,7 +170,7 @@ public class FrmJugador extends javax.swing.JFrame {
         });
         pnlFondoHerramientas.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 270, 80));
 
-        btnLogout.setBackground(new java.awt.Color(102, 105, 126));
+        btnLogout.setBackground(new java.awt.Color(123, 128, 156));
         btnLogout.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
@@ -88,7 +178,7 @@ public class FrmJugador extends javax.swing.JFrame {
         btnLogout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         pnlFondoHerramientas.add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 270, 80));
 
-        btnPrincipiante.setBackground(new java.awt.Color(102, 105, 126));
+        btnPrincipiante.setBackground(new java.awt.Color(123, 128, 156));
         btnPrincipiante.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         btnPrincipiante.setForeground(new java.awt.Color(255, 255, 255));
         btnPrincipiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/principiante.png"))); // NOI18N
@@ -96,7 +186,7 @@ public class FrmJugador extends javax.swing.JFrame {
         btnPrincipiante.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         pnlFondoHerramientas.add(btnPrincipiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 270, 80));
 
-        btnIntermedio.setBackground(new java.awt.Color(102, 105, 126));
+        btnIntermedio.setBackground(new java.awt.Color(123, 128, 156));
         btnIntermedio.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         btnIntermedio.setForeground(new java.awt.Color(255, 255, 255));
         btnIntermedio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/intermedio.png"))); // NOI18N
@@ -104,7 +194,7 @@ public class FrmJugador extends javax.swing.JFrame {
         btnIntermedio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         pnlFondoHerramientas.add(btnIntermedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 270, 80));
 
-        btnAvanzado.setBackground(new java.awt.Color(102, 105, 126));
+        btnAvanzado.setBackground(new java.awt.Color(123, 128, 156));
         btnAvanzado.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
         btnAvanzado.setForeground(new java.awt.Color(255, 255, 255));
         btnAvanzado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/avanzado.png"))); // NOI18N
@@ -114,12 +204,497 @@ public class FrmJugador extends javax.swing.JFrame {
 
         getContentPane().add(pnlFondoHerramientas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 720));
 
+        pnlHome.setBackground(new java.awt.Color(255, 255, 255));
+        pnlHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTItulo1.setFont(new java.awt.Font("Century Gothic", 1, 44)); // NOI18N
+        lblTItulo1.setForeground(new java.awt.Color(67, 67, 67));
+        lblTItulo1.setText("RESUMEN DE");
+        pnlHome.add(lblTItulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 270, 40));
+
+        pnlHomeP.setBackground(new java.awt.Color(220, 255, 248));
+        pnlHomeP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
+        pnlHomeP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloNota1.setFont(new java.awt.Font("Century Gothic", 1, 35)); // NOI18N
+        lblTituloNota1.setForeground(new java.awt.Color(51, 51, 51));
+        lblTituloNota1.setText("NOTA:");
+        pnlHomeP.add(lblTituloNota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
+
+        lblPunteoP.setFont(new java.awt.Font("Century Gothic", 1, 60)); // NOI18N
+        lblPunteoP.setForeground(new java.awt.Color(0, 153, 153));
+        pnlHomeP.add(lblPunteoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 50, 60));
+
+        lblEstadoP.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
+        lblEstadoP.setForeground(new java.awt.Color(0, 204, 204));
+        pnlHomeP.add(lblEstadoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 60));
+
+        pnlHome.add(pnlHomeP, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 690, 100));
+
+        pnlHomeA.setBackground(new java.awt.Color(251, 236, 255));
+        pnlHomeA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 51, 255), 2));
+        pnlHomeA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloNota3.setFont(new java.awt.Font("Century Gothic", 1, 35)); // NOI18N
+        lblTituloNota3.setForeground(new java.awt.Color(51, 51, 51));
+        lblTituloNota3.setText("NOTA:");
+        pnlHomeA.add(lblTituloNota3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
+
+        lblPunteoA.setFont(new java.awt.Font("Century Gothic", 1, 60)); // NOI18N
+        lblPunteoA.setForeground(new java.awt.Color(118, 6, 118));
+        pnlHomeA.add(lblPunteoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 50, 60));
+
+        lblEstadoA.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
+        lblEstadoA.setForeground(new java.awt.Color(213, 45, 255));
+        pnlHomeA.add(lblEstadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 60));
+
+        pnlHome.add(pnlHomeA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 690, 100));
+
+        pnlHomeI.setBackground(new java.awt.Color(255, 238, 219));
+        pnlHomeI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0), 2));
+        pnlHomeI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloNota2.setFont(new java.awt.Font("Century Gothic", 1, 35)); // NOI18N
+        lblTituloNota2.setForeground(new java.awt.Color(51, 51, 51));
+        lblTituloNota2.setText("NOTA:");
+        pnlHomeI.add(lblTituloNota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
+
+        lblPunteoI.setFont(new java.awt.Font("Century Gothic", 1, 60)); // NOI18N
+        lblPunteoI.setForeground(new java.awt.Color(224, 121, 19));
+        pnlHomeI.add(lblPunteoI, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 50, 60));
+
+        lblEstadoI.setFont(new java.awt.Font("Century Gothic", 1, 40)); // NOI18N
+        lblEstadoI.setForeground(new java.awt.Color(245, 135, 0));
+        pnlHomeI.add(lblEstadoI, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 60));
+
+        pnlHome.add(pnlHomeI, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 690, 100));
+
+        lblTitulo2.setFont(new java.awt.Font("Century Gothic", 1, 56)); // NOI18N
+        lblTitulo2.setForeground(new java.awt.Color(186, 186, 0));
+        lblTitulo2.setText("ACTIVIDADES");
+        pnlHome.add(lblTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 370, 50));
+
+        pnlTituloP.setBackground(new java.awt.Color(0, 204, 204));
+        pnlTituloP.setForeground(new java.awt.Color(255, 255, 255));
+        pnlTituloP.setToolTipText("");
+        pnlTituloP.setName(""); // NOI18N
+        pnlTituloP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblHomeTP.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblHomeTP.setForeground(new java.awt.Color(255, 255, 255));
+        lblHomeTP.setText("PRINCIPIANTE");
+        pnlTituloP.add(lblHomeTP, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -7, 170, 40));
+
+        pnlHome.add(pnlTituloP, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 30));
+
+        pnlTituloI.setBackground(new java.awt.Color(255, 153, 0));
+        pnlTituloI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblHomeTI.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblHomeTI.setForeground(new java.awt.Color(255, 255, 255));
+        lblHomeTI.setText("INTERMEDIO");
+        pnlTituloI.add(lblHomeTI, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 170, 50));
+
+        pnlHome.add(pnlTituloI, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 170, 30));
+
+        pnlTituloA.setBackground(new java.awt.Color(204, 51, 255));
+        pnlTituloA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblHomeTA.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblHomeTA.setForeground(new java.awt.Color(255, 255, 255));
+        lblHomeTA.setText("AVANZADO");
+        pnlTituloA.add(lblHomeTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 170, 50));
+
+        pnlHome.add(pnlTituloA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 170, 30));
+
+        jtpPestanias.addTab("HOME", pnlHome);
+
+        pnlPrincipiante.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPrincipiante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloP.setFont(new java.awt.Font("Century Gothic", 1, 44)); // NOI18N
+        lblTituloP.setForeground(new java.awt.Color(0, 204, 204));
+        lblTituloP.setText("PRINCIPIANTE");
+        pnlPrincipiante.add(lblTituloP, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 300, 40));
+
+        lblNumero1S.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero1S, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 70, 60));
+
+        lblNumero2S.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero2S, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 70, 60));
+
+        lblIgual1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual1.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual1.setText("=");
+        pnlPrincipiante.add(lblIgual1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 60, 60));
+
+        lblSum1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblSum1.setForeground(new java.awt.Color(0, 153, 204));
+        lblSum1.setText("+");
+        pnlPrincipiante.add(lblSum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 70, 60));
+
+        txtRespuestaS1.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaS1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaS1.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 160, 60));
+
+        lblNumero3S.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero3S, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 70, 60));
+
+        lblSum2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblSum2.setForeground(new java.awt.Color(0, 153, 204));
+        lblSum2.setText("+");
+        pnlPrincipiante.add(lblSum2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 70, 60));
+
+        lblNumero4S.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero4S, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 70, 60));
+
+        lblIgual2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual2.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual2.setText("=");
+        pnlPrincipiante.add(lblIgual2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 60, 60));
+
+        txtRespuestaS2.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaS2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaS2.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 160, 60));
+
+        lblResta1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblResta1.setForeground(new java.awt.Color(0, 153, 204));
+        lblResta1.setText("-");
+        pnlPrincipiante.add(lblResta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 70, 60));
+
+        txtRespuestaR1.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaR1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaR1.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 160, 60));
+
+        lblNumero1R.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero1R, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 70, 60));
+
+        lblNumero2R.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero2R, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 70, 60));
+
+        lblIgual3.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual3.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual3.setText("=");
+        pnlPrincipiante.add(lblIgual3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 60, 60));
+
+        lblResta2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblResta2.setForeground(new java.awt.Color(0, 153, 204));
+        lblResta2.setText("-");
+        pnlPrincipiante.add(lblResta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 70, 60));
+
+        txtRespuestaR2.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaR2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaR2.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 160, 60));
+
+        lblNumero3R.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero3R, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 70, 60));
+
+        lblNumero4R.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero4R, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 70, 60));
+
+        lblIgual4.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual4.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual4.setText("=");
+        pnlPrincipiante.add(lblIgual4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 60, 60));
+
+        lblMulti1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblMulti1.setForeground(new java.awt.Color(0, 153, 204));
+        lblMulti1.setText("*");
+        pnlPrincipiante.add(lblMulti1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 70, 60));
+
+        txtRespuestaM1.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaM1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaM1.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 160, 60));
+
+        lblNumero1M.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero1M, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 70, 60));
+
+        lblNumero2M.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero2M, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 70, 60));
+
+        lblIgual5.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual5.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual5.setText("=");
+        pnlPrincipiante.add(lblIgual5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, 60, 60));
+
+        lblDiv1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblDiv1.setForeground(new java.awt.Color(0, 153, 204));
+        lblDiv1.setText("/");
+        pnlPrincipiante.add(lblDiv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 70, 60));
+
+        txtRespuestaD1.setBackground(new java.awt.Color(204, 255, 204));
+        txtRespuestaD1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        txtRespuestaD1.setForeground(new java.awt.Color(51, 51, 51));
+        pnlPrincipiante.add(txtRespuestaD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, 160, 60));
+
+        lblNumero1D.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero1D, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 70, 60));
+
+        lblNumero2D.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        pnlPrincipiante.add(lblNumero2D, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, 70, 60));
+
+        lblIgual6.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblIgual6.setForeground(new java.awt.Color(0, 153, 204));
+        lblIgual6.setText("=");
+        pnlPrincipiante.add(lblIgual6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 60, 60));
+
+        btnTerminarP.setBackground(new java.awt.Color(0, 204, 204));
+        btnTerminarP.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        btnTerminarP.setForeground(new java.awt.Color(255, 255, 255));
+        btnTerminarP.setText("TERMINAR");
+        btnTerminarP.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlPrincipiante.add(btnTerminarP, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 150, 80));
+
+        lblDescripcionP.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        lblDescripcionP.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescripcionP.setText("Resuelva las siguientes operaciones aritméticas y responda con NÚMEROS ENTEROS.");
+        pnlPrincipiante.add(lblDescripcionP, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jtpPestanias.addTab("PRINCIPIANTE", pnlPrincipiante);
+
+        pnlIntermedio.setBackground(new java.awt.Color(255, 255, 255));
+        pnlIntermedio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloI.setFont(new java.awt.Font("Century Gothic", 1, 44)); // NOI18N
+        lblTituloI.setForeground(new java.awt.Color(0, 169, 253));
+        lblTituloI.setText("INTERMEDIO");
+        pnlIntermedio.add(lblTituloI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 300, 40));
+
+        lblDescripcionI.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        lblDescripcionI.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescripcionI.setText("Lea las siguientes preguntas y seleccione la respuesta correcta.");
+        pnlIntermedio.add(lblDescripcionI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        lblPregunta1B.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        lblPregunta1B.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta1B.setText("Algunos historiadores lo señalan como el símbolo de la defensa de la soberanía del territorio durante la Conquista.");
+        pnlIntermedio.add(lblPregunta1B, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, 30));
+
+        lblPregunta1A.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        lblPregunta1A.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta1A.setText("¿Quién fue el gran capitán quiché que enfrentó al ejército invasor español en 1524?");
+        pnlIntermedio.add(lblPregunta1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 30));
+
+        cmbRespuesta1.setBackground(new java.awt.Color(204, 255, 255));
+        cmbRespuesta1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbRespuesta1.setForeground(new java.awt.Color(51, 51, 51));
+        cmbRespuesta1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kaibil Balam", "Atanasio Tzul", "Tecún Umán", "Rabin Ajaw" }));
+        pnlIntermedio.add(cmbRespuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 330, -1));
+
+        lblNum1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        lblNum1.setForeground(new java.awt.Color(190, 250, 190));
+        lblNum1.setText("1");
+        pnlIntermedio.add(lblNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 20, 40));
+
+        lblNum2.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        lblNum2.setForeground(new java.awt.Color(153, 255, 204));
+        lblNum2.setText("2");
+        pnlIntermedio.add(lblNum2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 20, 40));
+
+        lblPregunta2A.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        lblPregunta2A.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta2A.setText("El Centro Cultural Miguel Ángel Asturias fue diseñado por el maestro Rodolfo Torres.");
+        pnlIntermedio.add(lblPregunta2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, 30));
+
+        lblPregunta2B.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        lblPregunta2B.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta2B.setText("Este enunciado es: ");
+        pnlIntermedio.add(lblPregunta2B, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, 30));
+
+        cmbRespuesta2.setBackground(new java.awt.Color(204, 255, 255));
+        cmbRespuesta2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbRespuesta2.setForeground(new java.awt.Color(51, 51, 51));
+        cmbRespuesta2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Verdadero", "Falso" }));
+        pnlIntermedio.add(cmbRespuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 330, -1));
+
+        lblNum3.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        lblNum3.setForeground(new java.awt.Color(0, 255, 204));
+        lblNum3.setText("3");
+        pnlIntermedio.add(lblNum3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 20, 40));
+
+        lblPregunta3A.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        lblPregunta3A.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta3A.setText("¿En qué departamento está ubicado el Volcán Tajumulco?");
+        pnlIntermedio.add(lblPregunta3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, 30));
+
+        lblPregunta3B.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        lblPregunta3B.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta3B.setText("El Volcán Tajumulco se caracteriza por ser el más alto de Guatemala y de Centroamérica.");
+        pnlIntermedio.add(lblPregunta3B, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, 30));
+
+        cmbRespuesta3.setBackground(new java.awt.Color(204, 255, 255));
+        cmbRespuesta3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbRespuesta3.setForeground(new java.awt.Color(51, 51, 51));
+        cmbRespuesta3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "San Marcos", "Santa Rosa", "Huehuetenango", "Jalapa", "El Progreso" }));
+        pnlIntermedio.add(cmbRespuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 330, -1));
+
+        lblNum4.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        lblNum4.setForeground(new java.awt.Color(0, 153, 153));
+        lblNum4.setText("4");
+        pnlIntermedio.add(lblNum4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 20, 40));
+
+        lblPregunta4.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        lblPregunta4.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta4.setText("¿Cuántos departamentos tiene Guatemala?");
+        pnlIntermedio.add(lblPregunta4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, -1, 60));
+
+        cmbRespuesta4.setBackground(new java.awt.Color(204, 255, 255));
+        cmbRespuesta4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbRespuesta4.setForeground(new java.awt.Color(51, 51, 51));
+        cmbRespuesta4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "20", "21", "22", "23", "24" }));
+        pnlIntermedio.add(cmbRespuesta4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 330, -1));
+
+        lblNum5.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        lblNum5.setForeground(new java.awt.Color(0, 102, 102));
+        lblNum5.setText("5");
+        pnlIntermedio.add(lblNum5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 20, 40));
+
+        lblPregunta5.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        lblPregunta5.setForeground(new java.awt.Color(51, 51, 51));
+        lblPregunta5.setText("Según el sistema de Gobierno, Guatemala es una:");
+        pnlIntermedio.add(lblPregunta5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, -1, 60));
+
+        cmbRespuesta5.setBackground(new java.awt.Color(204, 255, 255));
+        cmbRespuesta5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbRespuesta5.setForeground(new java.awt.Color(51, 51, 51));
+        cmbRespuesta5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Federación", "República", "Monarquía" }));
+        pnlIntermedio.add(cmbRespuesta5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 330, -1));
+
+        btnTerminarI.setBackground(new java.awt.Color(0, 169, 253));
+        btnTerminarI.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        btnTerminarI.setForeground(new java.awt.Color(255, 255, 255));
+        btnTerminarI.setText("TERMINAR");
+        btnTerminarI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlIntermedio.add(btnTerminarI, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 150, 80));
+
+        jtpPestanias.addTab("INTERMEDIO", pnlIntermedio);
+
+        pnlAvanzado.setBackground(new java.awt.Color(255, 255, 255));
+        pnlAvanzado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTituloA.setFont(new java.awt.Font("Century Gothic", 1, 44)); // NOI18N
+        lblTituloA.setForeground(new java.awt.Color(0, 0, 102));
+        lblTituloA.setText("AVANZADO");
+        pnlAvanzado.add(lblTituloA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 260, 40));
+
+        lblDescripcion2A.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        lblDescripcion2A.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescripcion2A.setText(" Traduzca las siguientes palabras al español. Escriba su respuesta en MAYÚSCULAS.");
+        pnlAvanzado.add(lblDescripcion2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 650, 20));
+
+        lblNumeroSecreto.setFont(new java.awt.Font("Century Gothic", 1, 50)); // NOI18N
+        lblNumeroSecreto.setForeground(new java.awt.Color(255, 153, 0));
+        lblNumeroSecreto.setText("¿?");
+        pnlAvanzado.add(lblNumeroSecreto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 70, 60));
+
+        txtIntento1.setBackground(new java.awt.Color(200, 244, 255));
+        txtIntento1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        txtIntento1.setForeground(new java.awt.Color(0, 0, 0));
+        pnlAvanzado.add(txtIntento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 180, 40));
+
+        txtIntento2.setEditable(false);
+        txtIntento2.setBackground(new java.awt.Color(159, 179, 222));
+        txtIntento2.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        txtIntento2.setForeground(new java.awt.Color(0, 0, 0));
+        pnlAvanzado.add(txtIntento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 180, 40));
+
+        txtIntento3.setEditable(false);
+        txtIntento3.setBackground(new java.awt.Color(204, 204, 255));
+        txtIntento3.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        txtIntento3.setForeground(new java.awt.Color(0, 0, 0));
+        pnlAvanzado.add(txtIntento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 180, 40));
+
+        lblIntento2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblIntento2.setForeground(new java.awt.Color(51, 51, 51));
+        lblIntento2.setText("SEGUNDO INTENTO");
+        pnlAvanzado.add(lblIntento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 110, -1));
+
+        lblIntento3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblIntento3.setForeground(new java.awt.Color(51, 51, 51));
+        lblIntento3.setText("TERCER INTENTO");
+        pnlAvanzado.add(lblIntento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 110, -1));
+
+        lblIntento1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblIntento1.setForeground(new java.awt.Color(51, 51, 51));
+        lblIntento1.setText("PRIMER INTENTO");
+        pnlAvanzado.add(lblIntento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
+
+        btnComprobarNumero.setBackground(new java.awt.Color(250, 201, 250));
+        btnComprobarNumero.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnComprobarNumero.setForeground(new java.awt.Color(51, 51, 51));
+        btnComprobarNumero.setText("COMPROBAR");
+        btnComprobarNumero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlAvanzado.add(btnComprobarNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 120, 60));
+
+        lblDescripcion1A.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        lblDescripcion1A.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescripcion1A.setText("Adivine el número del 0 al 15. Solo responda con números enteros. Tiene 3 oportunidades.");
+        pnlAvanzado.add(lblDescripcion1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 700, 20));
+
+        lblPalabra1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblPalabra1.setForeground(new java.awt.Color(119, 48, 119));
+        lblPalabra1.setText("BOOK");
+        pnlAvanzado.add(lblPalabra1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, -1, 30));
+
+        lblPalabra3.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblPalabra3.setForeground(new java.awt.Color(119, 48, 119));
+        lblPalabra3.setText("APPLE");
+        pnlAvanzado.add(lblPalabra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 540, -1, 30));
+
+        lblPalabra2.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblPalabra2.setForeground(new java.awt.Color(119, 48, 119));
+        lblPalabra2.setText("CAT");
+        pnlAvanzado.add(lblPalabra2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, -1, 30));
+
+        txtPalabra1A.setBackground(new java.awt.Color(255, 255, 204));
+        txtPalabra1A.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        txtPalabra1A.setForeground(new java.awt.Color(0, 0, 0));
+        txtPalabra1A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPalabra1AActionPerformed(evt);
+            }
+        });
+        pnlAvanzado.add(txtPalabra1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 160, -1));
+
+        txtPalabra3A.setBackground(new java.awt.Color(255, 255, 204));
+        txtPalabra3A.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        txtPalabra3A.setForeground(new java.awt.Color(0, 0, 0));
+        pnlAvanzado.add(txtPalabra3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 540, 160, -1));
+
+        txtPalabra2A.setBackground(new java.awt.Color(255, 255, 204));
+        txtPalabra2A.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        txtPalabra2A.setForeground(new java.awt.Color(0, 0, 0));
+        pnlAvanzado.add(txtPalabra2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 490, 160, -1));
+
+        btnTerminarA.setBackground(new java.awt.Color(0, 0, 102));
+        btnTerminarA.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        btnTerminarA.setForeground(new java.awt.Color(255, 255, 255));
+        btnTerminarA.setText("TERMINAR");
+        btnTerminarA.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlAvanzado.add(btnTerminarA, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 150, 80));
+
+        jtpPestanias.addTab("AVANZADO", pnlAvanzado);
+
+        getContentPane().add(jtpPestanias, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 770, 710));
+
+        lblFondoArriba.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo2.png"))); // NOI18N
+        getContentPane().add(lblFondoArriba, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 770, 80));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void txtPalabra1AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPalabra1AActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPalabra1AActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,15 +733,114 @@ public class FrmJugador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAvanzado;
+    public javax.swing.JButton btnComprobarNumero;
     public javax.swing.JButton btnHome;
     public javax.swing.JButton btnIntermedio;
     public javax.swing.JButton btnLogout;
     public javax.swing.JButton btnPrincipiante;
+    public javax.swing.JButton btnTerminarA;
+    public javax.swing.JButton btnTerminarI;
+    public javax.swing.JButton btnTerminarP;
+    public javax.swing.JComboBox<String> cmbRespuesta1;
+    public javax.swing.JComboBox<String> cmbRespuesta2;
+    public javax.swing.JComboBox<String> cmbRespuesta3;
+    public javax.swing.JComboBox<String> cmbRespuesta4;
+    public javax.swing.JComboBox<String> cmbRespuesta5;
+    public javax.swing.JOptionPane jopMensaje;
+    public javax.swing.JTabbedPane jtpPestanias;
+    private javax.swing.JLabel lblDescripcion1A;
+    private javax.swing.JLabel lblDescripcion2A;
+    private javax.swing.JLabel lblDescripcionI;
+    private javax.swing.JLabel lblDescripcionP;
+    private javax.swing.JLabel lblDiv1;
+    public javax.swing.JLabel lblEstadoA;
+    public javax.swing.JLabel lblEstadoI;
+    public javax.swing.JLabel lblEstadoP;
+    private javax.swing.JLabel lblFondoArriba;
+    private javax.swing.JLabel lblHomeTA;
+    private javax.swing.JLabel lblHomeTI;
+    private javax.swing.JLabel lblHomeTP;
     public javax.swing.JLabel lblIdUser;
+    private javax.swing.JLabel lblIgual1;
+    private javax.swing.JLabel lblIgual2;
+    private javax.swing.JLabel lblIgual3;
+    private javax.swing.JLabel lblIgual4;
+    private javax.swing.JLabel lblIgual5;
+    private javax.swing.JLabel lblIgual6;
     private javax.swing.JLabel lblImagenUsuario;
+    private javax.swing.JLabel lblIntento1;
+    private javax.swing.JLabel lblIntento2;
+    private javax.swing.JLabel lblIntento3;
+    private javax.swing.JLabel lblMulti1;
     public javax.swing.JLabel lblNombreUser;
+    private javax.swing.JLabel lblNum1;
+    private javax.swing.JLabel lblNum2;
+    private javax.swing.JLabel lblNum3;
+    private javax.swing.JLabel lblNum4;
+    private javax.swing.JLabel lblNum5;
+    public javax.swing.JLabel lblNumero1D;
+    public javax.swing.JLabel lblNumero1M;
+    public javax.swing.JLabel lblNumero1R;
+    public javax.swing.JLabel lblNumero1S;
+    public javax.swing.JLabel lblNumero2D;
+    public javax.swing.JLabel lblNumero2M;
+    public javax.swing.JLabel lblNumero2R;
+    public javax.swing.JLabel lblNumero2S;
+    public javax.swing.JLabel lblNumero3R;
+    public javax.swing.JLabel lblNumero3S;
+    public javax.swing.JLabel lblNumero4R;
+    public javax.swing.JLabel lblNumero4S;
+    public javax.swing.JLabel lblNumeroSecreto;
+    private javax.swing.JLabel lblPalabra1;
+    private javax.swing.JLabel lblPalabra2;
+    private javax.swing.JLabel lblPalabra3;
+    private javax.swing.JLabel lblPregunta1A;
+    private javax.swing.JLabel lblPregunta1B;
+    private javax.swing.JLabel lblPregunta2A;
+    private javax.swing.JLabel lblPregunta2B;
+    private javax.swing.JLabel lblPregunta3A;
+    private javax.swing.JLabel lblPregunta3B;
+    private javax.swing.JLabel lblPregunta4;
+    private javax.swing.JLabel lblPregunta5;
+    public javax.swing.JLabel lblPunteoA;
+    public javax.swing.JLabel lblPunteoI;
+    public javax.swing.JLabel lblPunteoP;
     public javax.swing.JLabel lblRangoUauario;
+    private javax.swing.JLabel lblResta1;
+    private javax.swing.JLabel lblResta2;
+    private javax.swing.JLabel lblSum1;
+    private javax.swing.JLabel lblSum2;
+    private javax.swing.JLabel lblTItulo1;
+    private javax.swing.JLabel lblTitulo2;
+    private javax.swing.JLabel lblTituloA;
+    private javax.swing.JLabel lblTituloI;
+    private javax.swing.JLabel lblTituloNota1;
+    private javax.swing.JLabel lblTituloNota2;
+    private javax.swing.JLabel lblTituloNota3;
+    private javax.swing.JLabel lblTituloP;
+    public javax.swing.JPanel pnlAvanzado;
     private javax.swing.JPanel pnlFondoHerramientas;
     private javax.swing.JPanel pnlFondoUsuario;
+    public javax.swing.JPanel pnlHome;
+    public javax.swing.JPanel pnlHomeA;
+    public javax.swing.JPanel pnlHomeI;
+    public javax.swing.JPanel pnlHomeP;
+    private javax.swing.JPanel pnlIntermedio;
+    public javax.swing.JPanel pnlPrincipiante;
+    private javax.swing.JPanel pnlTituloA;
+    private javax.swing.JPanel pnlTituloI;
+    private javax.swing.JPanel pnlTituloP;
+    public javax.swing.JTextField txtIntento1;
+    public javax.swing.JTextField txtIntento2;
+    public javax.swing.JTextField txtIntento3;
+    public javax.swing.JTextField txtPalabra1A;
+    public javax.swing.JTextField txtPalabra2A;
+    public javax.swing.JTextField txtPalabra3A;
+    public javax.swing.JTextField txtRespuestaD1;
+    public javax.swing.JTextField txtRespuestaM1;
+    public javax.swing.JTextField txtRespuestaR1;
+    public javax.swing.JTextField txtRespuestaR2;
+    public javax.swing.JTextField txtRespuestaS1;
+    public javax.swing.JTextField txtRespuestaS2;
     // End of variables declaration//GEN-END:variables
 }
